@@ -28,3 +28,14 @@ cursor.execute('''
                
                ''')
 conn.commit()
+
+#Insert data to the table
+cursor.execute('''
+              INSERT INTO airport (code,city,name)
+              VALUES 
+              ('DEL', 'NEW DELHI', 'IGIA'),
+              ('CCU', 'kolkata', 'NSCA'),
+              ('BOM', 'Mumbai', 'CSMA')
+              
+              ''')
+conn.commit()
