@@ -8,7 +8,10 @@ try:
            user=os.getenv('MY_USERNAME'),
            password = os.getenv('MY_PASSWORD')
     )
-    mycursor = conn.cursor()
+    cursor = conn.cursor()
     print('Connected to MySQL database')
 except mysql.connector.Error as err:
     print(err)
+#CREATE A DATABASE ON THE DB SERVER
+cursor.execute('CREATE DATABASE indigo')
+conn.commit()
