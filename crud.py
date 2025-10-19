@@ -6,12 +6,25 @@ try:
     conn = mysql.connector.connect(
            host='localhost',
            user=os.getenv('MY_USERNAME'),
-           password = os.getenv('MY_PASSWORD')
+           password = os.getenv('MY_PASSWORD'),
+           database='indigo'
     )
     cursor = conn.cursor()
     print('Connected to MySQL database')
 except mysql.connector.Error as err:
     print(err)
 #CREATE A DATABASE ON THE DB SERVER
-cursor.execute('CREATE DATABASE indigo')
+#cursor.execute('CREATE DATABASE indigo')
+#conn.commit()
+
+#Create a Table
+cursor.execute('''
+               CREATE TABLE IF NOT EXISTS airport (
+                airport_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+                code VARCHAR(10) NOT NULL,
+                city VARCHAR(50) NOT NULL,
+                name VARCHAR(255)
+                )
+               
+               ''')
 conn.commit()
