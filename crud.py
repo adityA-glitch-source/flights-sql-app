@@ -30,12 +30,19 @@ cursor.execute('''
 conn.commit()
 
 #Insert data to the table
-cursor.execute('''
-              INSERT INTO airport (code,city,name)
-              VALUES 
-              ('DEL', 'NEW DELHI', 'IGIA'),
-              ('CCU', 'kolkata', 'NSCA'),
-              ('BOM', 'Mumbai', 'CSMA')
+#cursor.execute('''
+            #  INSERT INTO airport (code,city,name)
+             # VALUES
+              # ('DEL', 'NEW DELHI', 'IGIA'),
+              # ('CCU', 'kolkata', 'NSCA'),
+              # ('BOM', 'Mumbai', 'CSMA')
               
-              ''')
-conn.commit()
+             # ''')
+#conn.commit()
+
+#search/retrieve
+cursor.execute('select * from airport WHERE airport_id > 1')
+data = cursor.fetchall()
+for row in data:
+    print(row[3])
+
