@@ -46,3 +46,23 @@ data = cursor.fetchall()
 for row in data:
     print(row[3])
 
+# Update
+cursor.execute("""
+               UPDATE airport
+               SET name = 'Bombay'
+               WHERE airport_id = 3
+               """)
+conn.commit()
+
+cursor.execute('select * from airport')
+data = cursor.fetchall()
+print(data)
+
+#Delete
+cursor.execute("Delete from airport WHERE airport_id = 3  ")
+conn.commit()
+
+cursor.execute("select * from airport")
+
+data = cursor.fetchall()
+print(data)
