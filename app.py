@@ -1,4 +1,6 @@
 import streamlit as st
+from dbhelper import DB
+db = DB()
 
 
 st.sidebar.title('Flights Analytics')
