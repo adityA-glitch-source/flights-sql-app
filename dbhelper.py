@@ -6,13 +6,25 @@ class DB:
         # Connect to the Database
 
         try:
-            conn = mysql.connector.connect(
+            self.conn = mysql.connector.connect(
                 host='localhost',
                 user=os.getenv('MY_USERNAME'),
                 password=os.getenv('MY_PASSWORD'),
                 database='indigo'
             )
-            cursor = conn.cursor()
+            self.cursor = self.conn.cursor()
             print('Connected to MySQL database')
         except mysql.connector.Error as err:
             print(err)
+    def fetch_city_names(self):
+        city = []
+        self.cursor.execute(''' SELECT DISTINCT(Destination) FROM `flights_cleaned - flights_cleaned`
+                                UNION 
+                                SELECT DISTINCT(Source) FROM `flights_cleaned - flights_cleaned`
+
+                               ''' )
+        data = self.cursor.fetchall()
+
+        for item in data:
+            city.append(item[0])
+        return city

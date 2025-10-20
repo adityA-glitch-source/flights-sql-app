@@ -10,6 +10,12 @@ user_options = st.sidebar.selectbox('Menu', ['Select One', 'Check Flights', 'Ana
 if user_options == 'Check Flights':
     st.title('🔍 Check Flights')
 
+    col1, col2 = st.columns(2)
+    with col1:
+        city = db.fetch_city_names()
+        st.selectbox('Source',sorted(city))
+
+
 elif user_options == 'Analytics':
     st.title('📊 Analytics')
 
