@@ -65,4 +65,4 @@ conn.commit()
 cursor.execute("select * from airport")
 
 data = cursor.fetchall()
-print(data)
+
