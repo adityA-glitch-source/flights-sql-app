@@ -18,11 +18,13 @@ class DB:
             print(err)
     def fetch_city_names(self):
         city = []
-        self.cursor.execute(''' SELECT DISTINCT(Destination) FROM `flights_cleaned - flights_cleaned`
+        self.cursor.execute(""" SELECT DISTINCT Destination From `flights_cleaned - flights_cleaned`
                                 UNION 
-                                SELECT DISTINCT(Source) FROM `flights_cleaned - flights_cleaned`
+                                SELECT DISTINCT Source From `flights_cleaned - flights_cleaned`
+                                
+                            
 
-                               ''' )
+                               """)
         data = self.cursor.fetchall()
 
         for item in data:
