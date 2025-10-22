@@ -39,3 +39,16 @@ class DB:
                             """.format(source,destination))
         data = self.cursor.fetchall()
         return data
+    def fetch_airline_freequency(self):
+        airline = []
+        frequency = []
+        self.cursor.execute(""" 
+        SELECT Airline,COUNT(*)
+        FROM `flights_cleaned - flights_cleaned`
+        GROUP BY Airline
+        """)
+        data = self.cursor.fetchall()
+        for item in data:
+            airline.append(item[0])
+            frequency.append(item[1])
+        return airline, frequency

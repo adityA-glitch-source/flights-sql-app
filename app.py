@@ -1,4 +1,5 @@
 import streamlit as st
+import pandas as pd
 from dbhelper import DB
 db = DB()
 
@@ -17,8 +18,12 @@ if user_options == 'Check Flights':
     with col2:
        Destination = st.selectbox('Destination',sorted(city))
     if st.button('Search'):
-        results = db.fetch_all_flights(Source,Destination)
+        results = db.fetch_all_flights(Source, Destination)
+
         st.dataframe(results)
+
+
+
 
 
 elif user_options == 'Analytics':
