@@ -57,9 +57,9 @@ class DB:
         frequency = []
 
         self.cursor.execute("""
-                SELECT Source,COUNT(*) FROM (SELECT Source FROM flights
+                SELECT Source,COUNT(*) FROM (SELECT Source FROM `flights_cleaned - flights_cleaned`
         							UNION ALL
-        							SELECT Destination FROM flights) t
+        							SELECT Destination FROM `flights_cleaned - flights_cleaned`) t
                 GROUP BY t.Source
                 ORDER BY COUNT(*) DESC
                 """)
