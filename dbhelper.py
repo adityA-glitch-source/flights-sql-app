@@ -30,3 +30,12 @@ class DB:
         for item in data:
             city.append(item[0])
         return city
+    def fetch_all_flights(self,source,destination):
+        self.cursor.execute(""" 
+                            SELECT Airline,Route,Dep_Time,Duration 
+                            FROM `flights_cleaned - flights_cleaned`
+                            Where Source = '{}' 
+                            AND Destination = '{}' 
+                            """.format(source,destination))
+        data = self.cursor.fetchall()
+        return data

@@ -13,9 +13,12 @@ if user_options == 'Check Flights':
     col1, col2 = st.columns(2)
     city = db.fetch_city_names()
     with col1:
-        st.selectbox('Source',sorted(city))
+        Source = st.selectbox('Source',sorted(city))
     with col2:
-        st.selectbox('Destination',sorted(city))
+       Destination = st.selectbox('Destination',sorted(city))
+    if st.button('Search'):
+        results = db.fetch_all_flights(Source,Destination)
+        st.dataframe(results)
 
 
 elif user_options == 'Analytics':
