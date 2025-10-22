@@ -39,7 +39,7 @@ class DB:
                             """.format(source,destination))
         data = self.cursor.fetchall()
         return data
-    def fetch_airline_freequency(self):
+    def fetch_airline_frequency(self):
         airline = []
         frequency = []
         self.cursor.execute(""" 
