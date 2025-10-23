@@ -49,8 +49,16 @@ Click “Select Flights” → Displays flight data in a dataframe.
 
 Analyze & Visualize:
 
-  *Pie Chart: Airline frequency distribution.
+    *Pie Chart: Airline frequency distribution.
 
-  *Bar Chart: Flights per airport.
+    *Bar Chart: Flights per airport.
 
-  *Line Chart: Date-wise flight trends.
+    *Line Chart: Date-wise flight trends.
+
+📈 Sample Visuals
+| Visualization | Description                    |
+| ------------- | ------------------------------ |
+| 🥧 Pie Chart  | Airline frequency distribution |
+| 📊 Bar Chart  | Airport-wise flight counts     |
+| 📆 Line Chart | Date-wise flight trends        |
+
