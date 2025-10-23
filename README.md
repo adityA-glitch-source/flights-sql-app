@@ -62,3 +62,20 @@ Analyze & Visualize:
 | 📊 Bar Chart  | Airport-wise flight counts     |
 | 📆 Line Chart | Date-wise flight trends        |
 
+🧰 Future Enhancements
+
+    *🔍 Add search & filters by airline or date range.
+
+    *☁️ Deploy on Streamlit Cloud / Render.
+
+    *📈 Add passenger & revenue analytics.
+
+    *📬 Include download/export options for analytics reports.
+
+👨‍💻 Author
+
+Aditya Kumar
+Data Science Enthusiast 
+📧 adityasinghak17@gmail.com
+
+
