@@ -79,3 +79,9 @@ Data Science Enthusiast
 📧 adityasinghak17@gmail.com
 
 
+---
+
+⭐ If you like this project, give it a star on GitHub!
+It motivates me to build more open-source data apps 😊
+
+
