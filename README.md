@@ -41,9 +41,16 @@
 
 ---
 
-## ⚙️ Installation & Setup  
+🖥️ How It Works
 
-### 1️⃣ Clone the Repository  
-```bash
-git clone https://github.com/<your-username>/flight-analytics-dashboard.git
-cd flight-analytics-dashboard
+Select Airports → Choose Source and Destination from dropdowns.
+
+Click “Select Flights” → Displays flight data in a dataframe.
+
+Analyze & Visualize:
+
+  *Pie Chart: Airline frequency distribution.
+
+  *Bar Chart: Flights per airport.
+
+  *Line Chart: Date-wise flight trends.
