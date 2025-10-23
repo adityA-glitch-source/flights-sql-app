@@ -50,6 +50,13 @@ elif user_options == 'Analytics':
 
     st.plotly_chart(fig, theme="streamlit", use_container_width=True)
 
+    date, frequency2 = db.daily_frequency()
+    fig = px.line(
+       x=date,
+       y=frequency2
+    )
+
+    st.plotly_chart(fig, theme="streamlit", use_container_width=True)
 
 else:
     # Landing / About Page
